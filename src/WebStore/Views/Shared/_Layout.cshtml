@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>WebStore</title>
+    @await Html.PartialAsync("Partial/_Styles")
+</head>
+<body class="alt-menu sidebar-noneoverflow">
+
+    <partial name="Partial/_Loader" />
+
+    <partial name="Partial/_Navbar" />
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <div class="main-container" id="container">
+
+        <div class="overlay"></div>
+        <div class="search-overlay"></div>
+
+        @RenderBody()
+
+    </div>
+    <!-- END MAIN CONTAINER -->
+    <partial name="Partial/_Scripts" />
+</body>
+</html>
