@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>30906d29-dc5a-4f08-8644-92fa2058a81e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +15,5 @@
     <Folder Include="Views\" />
     <Folder Include="Views\Home\" />
     <Folder Include="wwwroot\" />
-    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 </Project>

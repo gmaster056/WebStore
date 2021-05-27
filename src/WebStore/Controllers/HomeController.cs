@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
@@ -24,18 +22,5 @@ namespace WebStore.Controllers
             return View();
         }
 
-        [Route("/cards")]
-        public IActionResult Cards()
-        {
-            return View(_Employees);
-        }
-
-        [Route("/card/{id}")]
-        public IActionResult Card(int Id)
-        {
-            //Employee employee = _Employees.Find(x => x.Id == Id);
-            //Employee employee = new Employee() { FirstName = "Александр", LastName = "Амелькин", MiddleName = "Алексеевич", Age = 33 };
-            return View(_Employees.Find(x => x.Id == Id));
-        }
     }
 }
