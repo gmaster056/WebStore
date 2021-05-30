@@ -49,7 +49,7 @@ namespace WebStore.Controllers
                 s.Job = employee.Job;
             });
             
-            return View("Index");
+            return View("Employees",_Employees);
         }
 
     }
