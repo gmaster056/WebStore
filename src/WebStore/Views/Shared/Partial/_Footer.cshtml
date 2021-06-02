@@ -1,5 +1,5 @@
 ﻿<!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-<script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>
+@*<script src="~/lib/jquery/jquery.min.js" asp-append-version="true"></script>*@
 <script src="~/js/popper.min.js" asp-append-version="true"></script>
 <script src="~/lib/bootstrap/js/bootstrap.min.js" asp-append-version="true"></script>
 <script src="~/js/app.js" asp-append-version="true"></script>
@@ -10,7 +10,9 @@
         $('.menu').each(function () {
             $(this).removeClass("active");
         });
-        $('#' + path).addClass("active");
+        if ($("li").is('#' + path)) {
+            $('#' + path).addClass("active");
+        }
     }
 </script>
 <script src="~/js/custom.js" asp-append-version="true"></script>

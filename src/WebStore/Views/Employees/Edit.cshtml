@@ -1,0 +1,103 @@
+﻿@model WebStore.ViewModels.EmployeeViewModel
+<!--  BEGIN CONTENT PART  -->
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="page-header">
+            <div class="page-title">
+                <h3>Employee</h3>
+            </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 layout-spacing">
+            <form asp-action="Save" class="section general-info">
+                <input type="hidden" name="Id" value="@Model.Id" />
+                <div class="info">
+                    <h6 class="">General Information</h6>
+                    <div class="row">
+                        <div class="col-lg-11 mx-auto">
+                            <div class="row">
+                                <div class="col-xl-10 col-lg-12 col-md-8 mt-md-0 mt-4">
+                                    <div class="form">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="FirstName"></label>
+                                                    <input class="form-control mb-4" asp-for="FirstName" id="FirstName" placeholder="First Name" value="@Model.FirstName">
+                                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="MiddleName"></label>
+                                                    <input class="form-control mb-4" asp-for="MiddleName" id="MiddleName" placeholder="Middle Name" value="@Model.MiddleName">
+                                                    <span asp-validation-for="MiddleName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="LastName"></label>
+                                                    <input class="form-control mb-4" asp-for="LastName" id="LastName" placeholder="Last Name" value="@Model.LastName">
+                                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label class="dob-input" asp-for="Age"></label>
+                                                <div class="d-sm-flex d-block">
+                                                    <div class="form-group mr-1">
+                                                        <select class="form-control" asp-for="Age" id="exampleFormControlSelect1">
+                                                            <option value="">Age</option>
+                                                            @for (int i = 18; i <= 100; i++)
+                                                            {
+                                                                @if (i == Model.Age)
+                                                                {
+                                                                    <option selected="">@i</option>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <option>@i</option>
+                                                                }
+                                                            }
+                                                        </select>
+                                                        <span asp-validation-for="Age" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="City"></label>
+                                                    <input asp-for="City" class="form-control mb-4" id="City" placeholder="City" value="@Model.City">
+                                                    <span asp-validation-for="City" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="Email"></label>
+                                                    <input asp-for="Email" class="form-control mb-4" id="Email" placeholder="Email" value="@Model.Email">
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label asp-for="Job"></label>
+                                                    <input asp-for="Job" class="form-control mb-4" id="Job" placeholder="Job" value="@Model.Job">
+                                                    <span asp-validation-for="Job" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <button id="add-work-platforms" class="btn btn-primary">Сохранить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!--  END CONTENT PART  -->
+@*<script src="~/lib/jquery-validate/jquery.validate.min.js"></script>*@
+@*<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>*@
