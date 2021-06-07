@@ -2081,3 +2081,24 @@ table .badge-success, table .badge-primary, table .badge-warning, table .badge-d
 
 .position-relative {
   position: relative; }
+
+.page-header .page-title .add-profile {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #1b55e2;
+    background: linear-gradient(to right, #0081ff 0%, #0045ff 100%);
+    border-radius: 50%;
+    box-shadow: 0 10px 15px rgb(0 69 255 / 20%);
+}
+
+.page-header .page-title .add-profile svg {
+    font-size: 17px;
+    vertical-align: middle;
+    margin-right: 0;
+    color: #fff;
+    width: 19px;
+    align-self: center;
+}
