@@ -2,9 +2,10 @@
 
 namespace WebStore.Controllers
 {
-    public class HomeController : Controller
+    [Route("")]
+    public class ShopController : Controller
     {
-
+        [Route("")]
         public IActionResult Index()
         {
             return View();
