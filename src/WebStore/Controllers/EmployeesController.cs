@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Models;
 using WebStore.Services.Interfaces;
@@ -23,7 +19,7 @@ namespace WebStore.Controllers
         [Route("")]
         public IActionResult Index() => View(_Employees.GetAll());
 
-        [Route("edit")]
+        [Route("edit/{Id?}")]
         public IActionResult Edit(int? Id)
         {
             if (Id is null)
@@ -44,16 +40,17 @@ namespace WebStore.Controllers
             return View(model);
         }
 
-        //[Route("edit")]
-        //public IActionResult Edit(EmployeeViewModel model)
-        //{
-
-        //}
-
         [Route("save")]
         [HttpPost]
         public IActionResult Save(EmployeeViewModel employee)
         {
+
+            if (employee.FirstName == "Qwe")
+                ModelState.AddModelError("FirstName", "Qwe - плохое имя!");
+
+            if (!ModelState.IsValid)
+                return View("Edit",employee);
+
             var config = new MapperConfiguration(cfg =>
                     cfg.CreateMap<EmployeeViewModel, Employee>()
                 );
@@ -70,7 +67,7 @@ namespace WebStore.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("delete")]
+        [Route("delete/{Id}")]
         [HttpPost]
         public IActionResult Delete(int Id)
         {

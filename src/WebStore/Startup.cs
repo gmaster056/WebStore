@@ -19,6 +19,7 @@ namespace WebStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IEmployee,WorkWithEmployee>();
+            services.AddSingleton<IProduct, WorkWithProduct>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
