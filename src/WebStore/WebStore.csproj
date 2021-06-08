@@ -23,6 +23,7 @@
     <Folder Include="Services\Interfaces\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Home\Partial\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebStore.Domain\WebStore.Domain.csproj">
