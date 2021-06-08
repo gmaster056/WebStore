@@ -100,3 +100,7 @@ h1,h2,h3,h4,h5,h6 { color: #3b3f5c; }
     color: #1b55e2;
     fill: rgba(27, 85, 226, 0.23921568627450981);
 }
+.card-header section > div:hover {
+    color: #1b55e2;
+    font-weight: 600;
+}

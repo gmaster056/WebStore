@@ -24,6 +24,9 @@
     <Folder Include="ViewModels\" />
     <Folder Include="Data\" />
     <Folder Include="Views\Shop\Partial\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Sections\" />
+    <Folder Include="Components\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebStore.Domain\WebStore.Domain.csproj">

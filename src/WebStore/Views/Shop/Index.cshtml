@@ -1,4 +1,6 @@
-﻿<!--  BEGIN CONTENT PART  -->
+﻿@model WebStore.ViewModels.CatalogViewModel
+
+<!--  BEGIN CONTENT PART  -->
 <div id="content" class="main-content">
     <div class="layout-px-spacing">
 
@@ -8,13 +10,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-1 col-lg-1">
+            <div class="col-md-2 col-lg-2">
                 <div class="card">
                     <div class="card-body">
-                        <partial name="Partial/_Section" />
+                        @await Component.InvokeAsync("Sections")
                         <br>
                         <hr />
-                        <partial name="Partial/_Brand" />
+                        <partial name="Partial/_Brand" model="@Model"/>
                     </div>
                 </div>
             </div>
