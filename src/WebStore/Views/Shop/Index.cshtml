@@ -16,7 +16,8 @@
                         @await Component.InvokeAsync("Sections")
                         <br>
                         <hr />
-                        <partial name="Partial/_Brand" model="@Model"/>
+                        <br>
+                        @await Component.InvokeAsync("Brands")
                     </div>
                 </div>
             </div>
