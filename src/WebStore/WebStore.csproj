@@ -14,7 +14,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
     <Folder Include="Views\" />
-    <Folder Include="Views\Home\" />
+    <Folder Include="Views\Shop\" />
     <Folder Include="wwwroot\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Views\Shared\Partial\" />
@@ -22,5 +22,15 @@
     <Folder Include="Services\" />
     <Folder Include="Services\Interfaces\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Data\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\Sections\" />
+    <Folder Include="Components\" />
+    <Folder Include="Views\Shared\Components\Brands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebStore.Domain\WebStore.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

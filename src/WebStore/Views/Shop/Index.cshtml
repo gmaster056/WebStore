@@ -1,0 +1,27 @@
+﻿@model WebStore.ViewModels.CatalogViewModel
+
+<!--  BEGIN CONTENT PART  -->
+<div id="content" class="main-content">
+    <div class="layout-px-spacing">
+
+        <div class="page-header">
+            <div class="page-title">
+                <h3>Store</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-lg-2">
+                <div class="card">
+                    <div class="card-body">
+                        @await Component.InvokeAsync("Sections")
+                        <br>
+                        <hr />
+                        <br>
+                        @await Component.InvokeAsync("Brands")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  END CONTENT PART  -->

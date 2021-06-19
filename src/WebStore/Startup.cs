@@ -19,6 +19,7 @@ namespace WebStore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IEmployee,WorkWithEmployee>();
+            services.AddSingleton<IProduct, WorkWithProduct>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
@@ -36,7 +37,7 @@ namespace WebStore
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name:"default",pattern:"{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name:"default",pattern:"{controller=Shop}/{action=Index}/{id?}");
             });
         }
     }

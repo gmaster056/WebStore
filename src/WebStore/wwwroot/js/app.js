@@ -36,6 +36,7 @@ var App = function() {
     var toggleFunction = {
         sidebar: function() {
             $('.sidebarCollapse').on('click', function (sidebar) {
+                console.log("Hello");
                 sidebar.preventDefault();
                 $('body').toggleClass("topbar-closed");
                 $('body').toggleClass("sbar-open");
@@ -256,17 +257,17 @@ var App = function() {
             // Overlay fn
             toggleFunction.overlay();
             // Desktop Resoltion fn
-            _desktopResolution.onRefresh();
-            _desktopResolution.onResize();
+            //_desktopResolution.onRefresh();
+            //_desktopResolution.onResize();
             // Mobile Resoltion fn
-            _mobileResolution.onRefresh();
-            _mobileResolution.onResize();
+            //_mobileResolution.onRefresh();
+            //_mobileResolution.onResize();
 
-            if (!$('body').hasClass('alt-menu')) {
-                inBuiltfunctionality.default();
-            }
+            //if (!$('body').hasClass('alt-menu')) {
+                //inBuiltfunctionality.default();
+            //}
 
-            inBuiltfunctionality.languageDropdown();
+            //inBuiltfunctionality.languageDropdown();
 
             //switchFunctionality.onChange();
 
